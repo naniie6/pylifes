@@ -120,7 +120,7 @@ class AttackAnimal(Animal):
 if __name__ == '__main__':
     import sys,kernel
     engine = kernel.engine
-    if len(sys.argv)>1 and sys.args[1]=='-q':
+    if len(sys.argv)>1 and sys.argv[1]=='-q':
         engine.init_logs() # no pygame interface and use log instead.
     else:
         engine.init_pygame((800,600))

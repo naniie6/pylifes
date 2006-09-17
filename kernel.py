@@ -38,11 +38,11 @@ class GameEngine:
         Tasklet(self.render.initialize)()
         Tasklet(self.render.loop)()
 
-	def init_logs(self, dirname='logs'):
+    def init_logs(self, dirname='logs'):
 		import os
 		self.log = True
 		self.logdir = 'logs'
-		if os.path.exists(self.logdir):
+		if not os.path.exists(self.logdir):
 			os.mkdir(self.logdir)
 
     def add_life(self,life):

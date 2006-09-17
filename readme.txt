@@ -1,13 +1,14 @@
 version 0.1
 
-this program have used some resources ( some images and tilemap.py ) made by other people, thank you whoever you are!
+this program have used some resources fetched through network: the images, tilemap.py. thank you, the authors !
 
 requires:
   pygame: http://www.pygame.org/download.shtml
-  StacklessPytho: http://www.stackless.com/
+  StacklessPython: http://www.stackless.com/
 
-execute TestAnimal.py to watch the demo.
-change TestAnimal.py to write your own animals.
+You can execute TestAnimal.py to watch the demo.
+If you don't like the gui interface , you can execute "TextAnimal.py -q" to run it quietly, then you can have a look at the interesting logs.
+You can write your own animals.
 
 the APIs provided for writing animals :
 
