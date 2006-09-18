@@ -1,5 +1,7 @@
 provide planets, energy of animal.
+security-restricted execution environment for animals code.
 separate kernel and interface into processes, comunicate through socket.
 
 植物
+ animals 代码的受限执行环境
 内核与界面的分离 通过socket交流

@@ -46,14 +46,18 @@ class GameEngine:
 			os.mkdir(self.logdir)
 
     def add_life(self,life):
-        if debug:print 'add life',life.name
+        if debug: print 'add life',life.name
         self._lifes.append(life)
-        self._lifes_dict[life.name]=life
+        self._lifes_dict[life.name] = life
         if not self._tile_lifes.has_key(life.tilepos):
-            self._tile_lifes[life.tilepos]=[life]
+            self._tile_lifes[life.tilepos] = [life]
         else:
             self._tile_lifes[life.tilepos].append(life)
         Tasklet(life._main)()
+
+    def add_lifes(self, lifes):
+        for l in lifes:
+            self.add_life(l)
 
     def get_life(self,name):
         if self._lifes_dict.has_key(name) and self._lifes_dict[name]:
