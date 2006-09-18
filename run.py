@@ -1,10 +1,10 @@
 # coding:utf-8
-import sys, os, kernel
+import sys, os, kernel, lifebase
 
 def get_modules():
     names = [ f[:-3] for f in os.listdir('animals') 
                 if f.endswith('.py') and f != '__init__.py']
-    modules = [ __import__('animals.%s' % (name,), None, None, ['animals']) 
+    modules = [ __import__('animals.%s' % (name,), {'lifebase':lifebase}, None, ['animals']) 
                 for name in names ]
     return modules
 
