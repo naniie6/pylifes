@@ -8,7 +8,7 @@ requires:
 
 You can execute run.py to watch the demo.
 
-If you don't like the gui interface , you can execute "run.py -q" to run it quietly, then you can have a look at the interesting logs.
+If you don't like the gui interface or you don't like to install pygame libary, you can execute "run.py -q" to run quietly, and have a look at the interesting logs.
 
 You can play with the python code under directory "animals" to change the behaviour of the demos, also you can create your own animals, just create a python module under directory "animals", and create a subclass of "lifebase.Animal", and implement a "make_animals" function to return a list of Animals.
 
