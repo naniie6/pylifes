@@ -14,7 +14,6 @@ def load_image(name):
 
 images = {}
 def preload():
-    images['world'] = load_image('world.png')
     images['normal'] = load_image('normal.gif')
     images['light'] = load_image('light.gif')
     images['tiles'] = load_image('tiles.bmp')
@@ -35,8 +34,6 @@ class Render:
         temp_width = 150
         temp_height = 150
         self.minimap = MiniMap(self.engine,self,self.map,Rect([self.screen.get_rect().width-temp_width,0,temp_width,temp_height]))
-        self.world = images['world']
-        self.screen.blit(self.world,(0,0))
         #self.clock = pygame.time.Clock()
         pygame.time.set_timer(USEREVENT, 1000)
         self.font = pygame.font.Font('media/freesansbold.ttf', 40)
